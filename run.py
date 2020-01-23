@@ -10,7 +10,8 @@ import math
 import matplotlib.pyplot as plt
 from core.data_processor import DataLoader
 from core.model import Model
-
+# To fix OMP: Error #15: Initializing libiomp5.dylib, but found libiomp5.dylib already initialized.
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 def plot_results(predicted_data, true_data):
     fig = plt.figure(facecolor='white')
